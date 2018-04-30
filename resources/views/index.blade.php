@@ -65,7 +65,7 @@
   <div class="dropup">
     <button class="dropbtn">Dropup</button>
     <div class="dropup-content">
-      <a href="#">Clientes</a>
+      <a href="{{url('/clientes')}}">Clientes</a>
       <a href="#">Polizas</a>
     </div>
   </div>
@@ -84,22 +84,22 @@
           <th>Recibo</th>
           <th>Cuota</th>
           <th>Fecha Vencimiento</th>
-          <th>Deuda Total</th>
+          <th>Deuda Total</th> 
           <th>Forma de Pago</th>
         </tr>
       </thead>
       <thead id="myTable">
-      @foreach($cliente as $cli)
+      @foreach($deudas as $deuda)
         <tr style="position: relative;">
-          <td>{{$cli->NombreCliente}}</td>
-          <td>{{$cli->CodigoCliente}}</td>
-          <td>{{$cli->Ramo}}</td>
-          <td>{{$cli->Referencia}}</td>
-          <td>{{$cli->Recibo}}</td>
-          <td>{{$cli->Cuota}}</td>
-          <td>{{$cli->FechaVencimientoRecibo}}</td>
-          <td>{{$cli->DeudaTotalRecibo}}</td>
-          <td>{{$cli->FormaPago}}</td>
+          <td>{{$deuda->NombreCliente}}</td>
+          <td>{{$deuda->CodigoCliente}}</td>
+          <td>{{$deuda->Ramo}}</td>
+          <td>{{$deuda->Referencia}}</td>
+          <td>{{$deuda->Recibo}}</td>
+          <td>{{$deuda->Cuota}}</td>
+          <td>{{$deuda->FechaVencimientoRecibo}}</td>
+          <td>{{$deuda->DeudaTotalRecibo}}</td>
+          <td>{{$deuda->FormaPago}}</td>
         </tr>
       @endforeach
       </thead>
@@ -119,3 +119,4 @@
 
 </body>
 </html>
+
